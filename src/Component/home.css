@@ -1,0 +1,51 @@
+.homescreen{
+   position: relative; 
+   height: 100%;
+   background: url("https://penguinhomeless.com/wp-content/uploads/2020/08/library.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+} 
+
+.gradient{
+    width: 100%;
+    z-index: 1;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    background-image: linear-gradient(
+        to top,
+        rgba(0,0,0,0.8) 0,
+        rgba(0,0,0,0) 60%,
+        rgba(0,0,0,0.8) 100%,
+    );
+}
+
+.text{
+    box-shadow: 5px black;
+    text-shadow: 5px black;
+    margin-left: -150px;
+    margin-bottom: -80px;
+    position: fixed;
+    left: 50%;
+    bottom: 50%;
+    object-fit: contain;
+
+}
+
+.logo {
+    
+    color: white;
+    font-size: 60px;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    text-decoration: none;
+}
+
+.action{
+    position: relative;
+    margin-left: 70px;
+}
+.btn{
+    font-size: 30px;
+    font-weight: 600;
+}
