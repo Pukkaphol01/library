@@ -19,6 +19,16 @@ const dbConnection = mysql.createConnection({
 });
 
 app.use(cors())
+  app.post('/auth', jsonParser, function (req, res, next) {
+  try{
+    const token =  req.headers.authorization.split(' ')[1]
+    var decoded = jwt.verify(token,Secret);
+    res.json({status:'ok',decoded})
+  } catch(err){
+    res.json({status:'err',message:err})
+  }
+
+})
 
   app.get('/databasebook', function (req, res,next) {
   const page = parseInt(req.query.page);
@@ -345,4 +355,4 @@ app.listen(3333, function () {
   
 })
 
-module.exports = app;
+

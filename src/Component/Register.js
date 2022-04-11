@@ -49,8 +49,9 @@ export default function SignInSide() {
     })
     .then(response => response.json())
     .then(data => {
-      if(data.status === 'Ok'){
+      if(data.status === 'ok'){
           alert('register success')
+          window.location='/login'
       }
       else{
           alert('register failed')
@@ -128,16 +129,8 @@ export default function SignInSide() {
             >
               Sign Up
             </Button>
-            <Grid container justifyContent="flex-end">
-              <Grid item>
-                <Link href="login" variant="body2">
-                  Already have an account? Sign in
-                </Link> 
-              </Grid>
-            </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 5 }} />
       </Container>
     </ThemeProvider>
   );
